@@ -46,4 +46,5 @@ filter=true : 該欄位是否為搜尋的過濾條件，目前只能指定一欄，超過一欄，則為最後指
 - dbPwd :密碼
 - TargetPath :程式碼產生目的地資料夾
 - dbmlFileName : dbml 的檔名，同Class名稱。
-直接開啟 TargetPath 的 sln，直接 build 即可使用管理後台。
+
+Beta 版暫不提供 WebSite 樣版。
