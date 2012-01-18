@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+
+namespace JamZooMng.Models
+{
+    public class {ModelName}ListModel : BaseListModel<{ModelName}Model>
+    {
+        public {ModelName}ListModel() : base()
+        { }
+    }
+
+    public class {ModelName}Model 
+    {
+{Fields}
+
+        public {ModelName}Model()
+        {
+{Contructor}
+        }
+    }
+}

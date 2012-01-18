@@ -1,0 +1,6 @@
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\bin\Debug\Geekors_Generator_DbSchema.dll
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\bin\Debug\Geekors_Generator_DbSchema.pdb
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\obj\Debug\Geekors_Generator_DbSchema.dll
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\obj\Debug\Geekors_Generator_DbSchema.pdb
+D:\Project\JamZoo\Projects\Generator\Console\DbSchema\bin\Debug\Files\GetSchema.sql
