@@ -47,7 +47,8 @@ namespace JamZooMng.Services
 
             if (!string.IsNullOrEmpty(criteria.Search.KeyWord))
             {
-                query = query.Where(p => p.TITLE.Contains(criteria.Search.KeyWord));
+				//請自行修改.
+                //query = query.Where(p => p.TITLE.Contains(criteria.Search.KeyWord));
             }
 
             #region 排序

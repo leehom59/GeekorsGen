@@ -6,8 +6,6 @@
 
 
     <div class="editArea">
-
-        <h2>@Html.MvcSiteMap().SiteMapTitle()&nbsp;&nbsp;<span class="notes"></span></h2>
     
         <script type="text/javascript">
             function submitForm() {
@@ -39,14 +37,14 @@
             @Html.HiddenFor(p => p.Criteria.OrderBy.Mode)
         }
 
-		@using (Html.BeginForm("List", _Controller, FormMethod.Get))
+		@using (Html.BeginForm("List", _Controller, FormMethod.Get, new { @class="well form-search" }))
         {
             <table border="0" cellpadding="0" cellspacing="0" class="searchTable">
 	            <tbody><tr>
 		            <td width="60%">&nbsp;</td>
 		            <td class="select">關鍵字：
-                        @Html.TextBoxFor(p => p.Criteria.Search.KeyWord, new { @class="txt2", size="16" })</td>
-		            <td width="6%" class="btn">
+                        @Html.TextBoxFor(p => p.Criteria.Search.KeyWord, new {  @class = "txt2 input-medium search-query", size = "16" })</td>
+		            <td width="6%">
                         <input type="submit" class="btn" value="查詢" /></td>
 		            </tr>
 	            </tbody>
@@ -55,12 +53,12 @@
 		    
         @Html.Partial("_Pager", Model.Pager)
 
-		<table border="0" cellpadding="0" cellspacing="0" class="listTable">
+		<table border="0" cellpadding="0" cellspacing="0" class="table table-striped jamzoo-middle">
             <tbody>
                 <tr>
-                  <th width="40">編輯</th>
+                  <th width="40"></th>
 					{Headers}
-                  <th width="40">刪除</th>
+                  <th width="40"></th>
                 </tr>  
                 @Html.Partial("_Grid", Model.Data)
             </tbody>

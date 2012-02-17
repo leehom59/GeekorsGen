@@ -1,9 +1,8 @@
 ﻿@model JamZooMng.Models.{ModelName}Model
     <div class="editArea">
-        <h2>
-			<span class="notes">標有「<img src="@Url.Content("~/images/icon/bullet-red-star.gif")">」為必填項目：</span></h2>
-             @Html.ValidationSummary(true, "新增失敗")
-        <table border="0" cellpadding="0" cellspacing="0" class="tableStyle01">
+		<p><span class="label label-info">標有「<img src="@Url.Content("~/images/icon/bullet-red-star.gif")" />」為必填項目：</span></p>
+		@Html.ValidationSummary(true, "新增失敗")
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-striped jamzoo-middle">
             <tbody>
                 {Rows}
             </tbody>
