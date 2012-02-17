@@ -2,6 +2,7 @@
 ==========================
 
 http://blog.geekors.com/post/2012/01/17/GeekorsGen-beta-1.aspx
+http://blog.geekors.com/post/2012/01/30/GeekorsGen-Beta-2.aspx
 
 Feature
 -----
@@ -12,6 +13,10 @@ Feature
 	能對指定欄位做排序。(可多欄位)
 	能指定某些欄位放在列表頁。
 	完整的 SiteMapMenu 及 SiteMapPath 支援功能。
+	
+	Import Bootstrap UI Framework (It's awesome actually!)
+	Add jQueryFileUpload Component with Geekors version.
+	Add image resize , cut ability
 
 Requirements
 -----
