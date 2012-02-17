@@ -1,85 +1,51 @@
-﻿We have created a new repository for this project: https://github.com/facebook/facebook-php-sdk.  Please update anything you have pointing at this repostory to this location before April 1, 2012.
-
-Facebook PHP SDK (v.3.1.1)
+﻿GeekorsGen Beta v.1.0.2
 ==========================
 
-The [Facebook Platform](http://developers.facebook.com/) is
-a set of APIs that make your app more social
+http://blog.geekors.com/post/2012/01/17/GeekorsGen-beta-1.aspx
 
-This repository contains the open source PHP SDK that allows you to access Facebook Platform from your PHP app. Except as otherwise noted, the Facebook PHP SDK
-is licensed under the Apache Licence, Version 2.0
-(http://www.apache.org/licenses/LICENSE-2.0.html)
-
-
-Usage
+Feature
 -----
+	使用 Membership API 做後台權限控管。
+	針對單一表格做 CRUD 的管理。
+	針對欄位特性會產生不同樣板，未來可繼續擴充。
+	能對指定欄位做搜尋。(目前只能單欄位)
+	能對指定欄位做排序。(可多欄位)
+	能指定某些欄位放在列表頁。
+	完整的 SiteMapMenu 及 SiteMapPath 支援功能。
 
-The [examples][examples] are a good place to start. The minimal you'll need to
-have is:
-
-    require 'facebook-php-sdk/src/facebook.php';
-
-    $facebook = new Facebook(array(
-      'appId'  => 'YOUR_APP_ID',
-      'secret' => 'YOUR_APP_SECRET',
-    ));
-
-    // Get User ID
-    $user = $facebook->getUser();
-
-To make [API][API] calls:
-
-    if ($user) {
-      try {
-        // Proceed knowing you have a logged in user who's authenticated.
-        $user_profile = $facebook->api('/me');
-      } catch (FacebookApiException $e) {
-        error_log($e);
-        $user = null;
-      }
-    }
-
-Login or logout url will be needed depending on current user state.
-
-    if ($user) {
-      $logoutUrl = $facebook->getLogoutUrl();
-    } else {
-      $loginUrl = $facebook->getLoginUrl();
-    }
-
-[examples]: http://github.com/facebook/facebook-php-sdk/blob/master/examples/example.php
-[API]: http://developers.facebook.com/docs/api
-
-
-Tests
+Requirements
 -----
+	.Net Framework 4.0
+	.Net MVC Framework 3.0
+	SQL Server 2005 、SQL Server 2008
+	額外使用套件
+	MvcSiteMapProvider : github
+	jQUery File Upload : demo1、demo2
 
-In order to keep us nimble and allow us to bring you new functionality, without
-compromising on stability, we have ensured full test coverage of the SDK.
-We are including this in the open source repository to assure you of our
-commitment to quality, but also with the hopes that you will contribute back to
-help keep it stable. The easiest way to do so is to file bugs and include a
-test case.
+Process	
+-----
+	透過 SqlMetal 產生 dbml
+	透過 aspnet_regsql 產生 Membership API 所需的資料表
+	產生後台所需程式碼
+	~/Controllers
+	~/Models
+	~/Services
+	~/Views/{moduleName}
+	資料庫建置須知
 
-The tests can be executed by using this command from the base directory:
+	在建置資料庫的時候，必須在每個欄位的「描述」加上以下參數，讓 GeekorsGen 知道產生什麼樣的樣板，這個功能可無限擴充。
 
-    phpunit --stderr --bootstrap tests/bootstrap.php tests/tests.php
+	displayName=string :  該欄位要顯示的名稱
+	list=true : 該欄位是否要顯示在列表頁(同被視為排序的因子)
+	filter=true : 該欄位是否為搜尋的過濾條件，目前只能指定一欄，超過一欄，則為最後指定的欄位為主
+	 使用方法
 
+	設定 App.Config 中的 ConnectionString 或者 給定 Console 參數
+		- dbHost :資料庫主機
+		- dbName :資料庫名稱
+		- dbUser :使用者
+		- dbPwd :密碼
+		- TargetPath :程式碼產生目的地資料夾
+		- dbmlFileName : dbml 的檔名，同Class名稱。
 
-Contributing
-===========
-For us to accept contributions you will have to first have signed the [Contributor License Agreement](https://developers.facebook.com/opensource/cla).
-
-When commiting, keep all lines to less than 80 characters, and try to follow the existing style.
-
-Before creating a pull request, squash your commits into a single commit.
-
-Add the comments where needed, and provide ample explanation in the commit message.
-
-
-Report Issues/Bugs
-===============
-[Bugs](https://developers.facebook.com/bugs)
-
-[Questions](http://facebook.stackoverflow.com)
-
+Beta 版暫不提供 WebSite 樣版。
