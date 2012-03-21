@@ -40,22 +40,30 @@ MvcSiteMapProvider : <a href="https://github.com/maartenba/MvcSiteMapProvider" t
 jQUery File Upload : <a href="http://blueimp.github.com/jQuery-File-Upload/" target="_blank"> demo </a>
 
 ##Process	
+
 1.Generating the DBML file via the SqlMetal tool.
+
 2.Generating data vim aspnet_regsql tool that Membership api needs.
+
 3.Generating the CODE your project needs.
+
 	~/Controllers
 	~/Models
 	~/Services
 	~/Views/{moduleName}
 
 ###You must to know when you building database.
+
 You have to assign parameter to the 「Description」of each column when you building database.(It can be extended.)	
+
 	displayName=column name
 	list=true : Is the column be showed on list page.
 	filter=true : Is the column for filting data. (So far, only for one column)
 	 
 ##usage
+
 Set the connection string of App.config in Console project.
+
 	- dbHost : Database host.
 	- dbName : Database name.
 	- dbUser : User.
