@@ -34,21 +34,19 @@ jQUery File Upload : <a href="http://blueimp.github.com/jQuery-File-Upload/" tar
 	~/Services
 	~/Views/{moduleName}
 
-###You must to know when you build database.
-	You have to assign parameter to the 「Description」of each column when you building database.(It can be extended.)
-	
+###You must to know when you building database.
+You have to assign parameter to the 「Description」of each column when you building database.(It can be extended.)	
 	displayName=column name
 	list=true : Is the column be showed on list page.
 	filter=true : Is the column for filting data. (So far, only for one column)
 	 
 ##usage
-
-	Set the connection string of App.config in Console project.
-		- dbHost : Database host.
-		- dbName : Database name.
-		- dbUser : User.
-		- dbPwd : Password
-		- TargetPath : The target folder.
-		- dbmlFileName : File Name of DBML，same to Class name.
+Set the connection string of App.config in Console project.
+	- dbHost : Database host.
+	- dbName : Database name.
+	- dbUser : User.
+	- dbPwd : Password
+	- TargetPath : The target folder.  
+	- dbmlFileName : File Name of DBML，same to Class name.
 
 No WebSite template for beta version.
