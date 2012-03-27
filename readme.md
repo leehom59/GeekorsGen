@@ -26,9 +26,9 @@
 
 10.Add image resize , cut ability
 
-### (New)11. Multi language : English、Traditional Chinese、Simplified Chinese.
+(New)11. Multi language : English、Traditional Chinese、Simplified Chinese.
 
-### (New)12. Increasing four kinds of roles : SA、Power User、Data Maintainer、User.
+(New)12. Increasing four kinds of roles : SA、Power User、Data Maintainer、User.
 
 13. Some bug fixed.
 
