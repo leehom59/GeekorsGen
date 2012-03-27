@@ -1,4 +1,5 @@
-﻿GeekorsGen Beta v.1.0.2
+﻿GeekorsGen Beta v.1.1.0
+
 ==========================
 
 <a href="http://blog.geekors.com/post/2012/01/30/GeekorsGen-Beta-2.aspx" target="_blank">link</a>
@@ -24,6 +25,12 @@
 9.Add jQueryFileUpload Component with Geekors version.
 
 10.Add image resize , cut ability
+
+### (New)11. Multi language : English、Traditional Chinese、Simplified Chinese.
+
+### (New)12. Increasing four kinds of roles : SA、Power User、Data Maintainer、User.
+
+13. Some bug fixed.
 
 ##Requirements
 
