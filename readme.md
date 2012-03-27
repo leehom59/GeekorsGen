@@ -2,7 +2,8 @@
 
 ==========================
 
-<a href="http://blog.geekors.com/post/2012/01/30/GeekorsGen-Beta-2.aspx" target="_blank">link</a>
+<a href="http://blog.geekors.com/post/2012/03/27/GeekorsGen-v110-Released!.aspx" target="_blank">v1.1.0</a>,
+<a href="http://blog.geekors.com/post/2012/01/30/GeekorsGen-Beta-2.aspx" target="_blank">pre version</a>
 
 ##Feature
 
