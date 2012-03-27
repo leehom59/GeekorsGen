@@ -1,0 +1,31 @@
+﻿@model System.Collections.Generic.List<JamZooMng.Models.TrafficModel>
+
+@{
+    string _Controller = Request.RequestContext.RouteData.Values["controller"].ToString();
+    
+	
+
+    if (Model.Count() > 0)
+    {
+        int i=0;
+        foreach (var entity in Model)
+        {
+            <tr class="data">
+                <td><a class="btn edit" href="@Url.Content("~/" + _Controller + "/Edit/" + entity.Id)"> <i class="icon-file"></i></a></td>
+									<td> @entity.Title </td>
+					<td> @entity.Orders </td>
+					<td> @entity.Create_Date </td>
+					<td> @((entity.Online)? "是":"否") </td>
+
+                <td><a class="btn btn-danger" border="0" src="@(Url.Content("~/images/icon/icon_delete.gif"))" style="cursor:hand;cursor:pointer;" alt="Delete" onclick="javascript:if (confirm('Are you sure?')) { location.href='@Url.Content("~/" + _Controller + "/Delete/" + entity.Id)';};" ><i class="icon-trash icon-white"></i> </a></td>
+            </tr>
+                    i++;
+        }
+    }
+    else
+    {
+        <tr>
+			<td colspan="7"> <div class="well">@Resources.Resource.尚無檔案</div> </td>
+        </tr>
+    }
+}

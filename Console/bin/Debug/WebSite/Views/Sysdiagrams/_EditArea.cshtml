@@ -1,0 +1,67 @@
+﻿@model JamZooMng.Models.SysdiagramsModel
+    <div class="editArea">
+		@Html.ValidationSummary(true, "新增失敗")
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-striped jamzoo-middle">
+            <tbody>
+                				<tr>
+					<td width="20%" class="star1">
+						Name
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Name, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Name)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Principal_Id
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Principal_Id, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Principal_Id)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Diagram_Id
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Diagram_Id, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Diagram_Id)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Version
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Version, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Version)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Definition
+					</td>
+					<td>
+						@Html.TextAreaFor(p => p.Definition, new { @class = "txt1 span10", style="height:280px"})
+					</td>
+				</tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+	@{
+		string _Controller = Request.RequestContext.RouteData.Values["controller"].ToString();
+	}
+
+    <div class="BTNcenter">
+        <input type="submit" class="btn" id="btn_submit" name="btn_submit" value="@Resources.Resource.儲存送出" onclick="javascript:return confirm('Are you sure?');">
+        <input type="button" class="btn" id="btn_cancle" name="btn_cancle" value="@Resources.Resource.取消變更" onclick="javascript:if (confirm('Are you sure?')){window.location.href='@Url.Content("~/" + _Controller + "/List")';}">
+    </div>

@@ -15,6 +15,7 @@ namespace Geekors.Generator
         public static Regex Rgx_DataContextName = new Regex("\\{DataContextName\\}");
 
         public static Regex Rgx_KeyFieldName = new Regex("\\{KeyFieldName\\}");
+        public static Regex Rgx_KeyEexpression = new Regex("\\{KeyEexpression\\}");
         public static Regex Rgx_DaoKeyFieldName = new Regex("\\{DaoKeyFieldName\\}");
         public static Regex Rgx_KeyFieldType = new Regex("\\{KeyFieldType\\}");
         public static Regex Rgx_UpdateFields = new Regex("\\{UpdateFields\\}");

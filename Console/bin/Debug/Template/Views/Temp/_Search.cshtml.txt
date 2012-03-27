@@ -1,0 +1,2 @@
+﻿@model JamZooMng.Models.SearchModel
+

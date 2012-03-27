@@ -40,7 +40,7 @@ namespace Geekors.Generator
                 //建構函式
                 sbContructor.Append(Library.ContructorInit(dataType, fieldName));
 
-                sbFieds.Append(Library.FieldsFormat(DisplayName,dataType, fieldName, isRequired));
+                sbFieds.AppendLine(Library.FieldsFormat(DisplayName,dataType, fieldName, isRequired));
             }
 
             //replace {Fields}

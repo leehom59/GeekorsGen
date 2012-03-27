@@ -66,7 +66,8 @@ namespace Geekors.Generator
             StringBuilder sbToDaoModel = new StringBuilder();
 
             StringBuilder sbUpdatingFields = new StringBuilder();
-
+            
+            // field 的 轉換
             foreach (var field in ModelSchema.Schemas)
             {
                 string dbField = field.欄位名稱;
@@ -106,6 +107,11 @@ namespace Geekors.Generator
                         );
                 }
             }
+
+            //Get 及 Delete KeyEexpression 的轉換, 
+            string _strKeyExp = (KeyFieldType.ToLower().Equals("string")) ? KeyDaoFieldName : KeyFieldType + ".Parse(id)";
+            FileContent = GlobalRegex.Rgx_KeyEexpression.Replace(FileContent, _strKeyExp);
+
             //mapping function
             FileContent = GlobalRegex.Rgx_Mapping_ToDBModel.Replace(FileContent, sbToDbModel.ToString());
             FileContent = GlobalRegex.Rgx_Mapping_ToDAOModel.Replace(FileContent, sbToDaoModel.ToString());

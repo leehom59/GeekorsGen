@@ -11,7 +11,8 @@ namespace Geekors.Generator.Template
         _Grid,
         Add,
         Edit,
-        List
+        List,
+        _ViewStart
     }
     /// <summary>
     /// Load Template
@@ -37,6 +38,8 @@ namespace Geekors.Generator.Template
 
         public string ListTemplate { get; private set; }
 
+        public string _ViewStartTemplate { get; private set; }
+
         public TemplateService()
         {
             ModelTemplate = GetModelTemplate();
@@ -50,6 +53,7 @@ namespace Geekors.Generator.Template
             AddTemplate = DictViewsTemplates[ViewsTemplateCategory.Add];
             EditTemplate = DictViewsTemplates[ViewsTemplateCategory.Edit];
             ListTemplate = DictViewsTemplates[ViewsTemplateCategory.List];
+            _ViewStartTemplate = DictViewsTemplates[ViewsTemplateCategory._ViewStart];
         }
 
         protected static string Load(string RelativePath)
@@ -87,6 +91,7 @@ namespace Geekors.Generator.Template
             result[ViewsTemplateCategory.Add] = Load("Template/Views/Temp/Add.cshtml.txt");
             result[ViewsTemplateCategory.Edit] = Load("Template/Views/Temp/Edit.cshtml.txt");
             result[ViewsTemplateCategory.List] = Load("Template/Views/Temp/List.cshtml.txt");
+            result[ViewsTemplateCategory._ViewStart] = Load("Template/Views/Temp/_ViewStart.cshtml.txt");
 
             return result;
         }

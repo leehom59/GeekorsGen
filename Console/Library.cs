@@ -150,18 +150,18 @@ namespace Geekors.Generator
 
 			if (required)
 			{
-				sb_fields.AppendFormat("\t\t[Required]\r\n");
+				sb_fields.AppendFormat("\t\t[Required(ErrorMessageResourceType = typeof(Validation), ErrorMessageResourceName=\"必填\")]\r\n");
 			}
 
 			if (IsIntegerType(type))
 			{
-				sb_fields.AppendFormat("\t\t[RegularExpression(\"\\\\d+\", ErrorMessage=\"必須為數字\")]\r\n");
+                sb_fields.AppendFormat("\t\t[RegularExpression(\"\\\\d+\", ErrorMessageResourceType=typeof(Validation), ErrorMessageResourceName=\"必須為數字\")]\r\n");
 			}
 
 			// 如果是 email 要做格式的轉換
 			if (fieldName.ToLower().Contains("email"))
 			{
-				sb_fields.AppendFormat("\t\t[RegularExpression(\"^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$\",ErrorMessage=\"格式錯誤\")]\r\n");
+                sb_fields.AppendFormat("\t\t[RegularExpression(\"^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$\",ErrorMessageResourceType=typeof(Validation), ErrorMessageResourceName=\"格式錯誤\")]\r\n");
 			}
 
 			sb_fields.AppendFormat("\t\tpublic {2} {3} {0} get; set; {1}\r\n",
@@ -220,6 +220,14 @@ namespace Geekors.Generator
 							fieldName
 						);
 					break;
+                case "string":
+                    if (fieldName.ToLower().Equals("id"))
+                    {
+                        sbValue.AppendFormat("\t\t\t{0} = Utils.GetObjectId();\r\n",
+                                fieldName
+                            );
+                    }
+                    break;
 				default:
 					break;
 			}

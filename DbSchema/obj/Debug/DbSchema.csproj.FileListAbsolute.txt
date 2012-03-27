@@ -1,0 +1,6 @@
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\bin\Debug\Files\GetSchema.sql
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\bin\Debug\Geekors_Generator_DbSchema.dll
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\bin\Debug\Geekors_Generator_DbSchema.pdb
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\obj\Debug\Geekors_Generator_DbSchema.dll
+C:\Users\Winnie\GitHub\GeekorsGen\DbSchema\obj\Debug\Geekors_Generator_DbSchema.pdb

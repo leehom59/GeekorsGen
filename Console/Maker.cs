@@ -58,6 +58,10 @@ namespace Geekors.Generator
                 View_EditAreaMaker viewEditAreaMaker = new View_EditAreaMaker(item, templateService._EditAreaTemplate);
                 viewEditAreaMaker.Start();
                 viewEditAreaMaker.Save();
+
+                View_viewstratMaker viewStartMaker = new View_viewstratMaker(item, templateService._ViewStartTemplate);
+                viewStartMaker.Start();
+                viewStartMaker.Save();
             }
 
           

@@ -1,0 +1,235 @@
+﻿@model JamZooMng.Models.PartnerModel
+    <div class="editArea">
+		@Html.ValidationSummary(true, "新增失敗")
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-striped jamzoo-middle">
+            <tbody>
+                				<tr>
+					<td width="20%" class="star1">
+						編號
+					</td>
+					<td>
+						自動產生
+						@Html.HiddenFor(p => p.Id)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Category
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Category, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Category)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						廠商名稱
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Cname, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Cname)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Cimage
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Cimage, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Cimage)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						Cdesc
+					</td>
+					<td>
+						@Html.TextAreaFor(p => p.Cdesc, new { @class = "txt1 span10", style="height:280px"})
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						連結
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Link, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Link)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						電話
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Phone, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Phone)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						區碼
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Areaid, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Areaid)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						地址
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Address, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Address)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						經度
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Gmap_Lng, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Gmap_Lng)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						緯度
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Gmap_Lat, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Gmap_Lat)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						優惠憑證標題
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Discount_Title, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Discount_Title)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						優惠憑證圖
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Discount_Image, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Discount_Image)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						優惠憑證描述
+					</td>
+					<td>
+						@Html.TextAreaFor(p => p.Discount_Desc, new { @class = "txt1 span10", style="height:280px"})
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						分店地址
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Location_Address, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Location_Address)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						分店經度
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Location_Gmap_Lng, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Location_Gmap_Lng)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						分店緯度
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Location_Gmap_Lat, new { @class = "span5 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Location_Gmap_Lat)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						排序(由大到小)
+					</td>
+					<td>
+						@Html.TextBoxFor(p => p.Orders, new { @class = "span1 txt1", size = "30"})
+						@Html.ValidationMessageFor(p => p.Orders)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						建立日期
+					</td>
+					<td>
+						@Html.Label(Model.Create_Date.ToString("yyyy-MM-dd"))
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						上線日期
+					</td>
+					<td>
+						@Html.TextBox("S_Date", Model.S_Date.ToString("yyyy-MM-dd"), new { @class = "span2 txt1 calendar", size = "30" })
+						@Html.ValidationMessageFor(p => p.S_Date)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						下線日期
+					</td>
+					<td>
+						@Html.TextBox("E_Date", Model.E_Date.ToString("yyyy-MM-dd"), new { @class = "span2 txt1 calendar", size = "30" })
+						@Html.ValidationMessageFor(p => p.E_Date)
+					</td>
+				</tr>
+
+				<tr>
+					<td width="20%" class="star1">
+						是否上線
+					</td>
+					<td>
+						@Html.RadioButtonFor(p => p.Online, "True") 是&nbsp;
+						@Html.RadioButtonFor(p => p.Online, "False") 否&nbsp;
+					</td>
+				</tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+	@{
+		string _Controller = Request.RequestContext.RouteData.Values["controller"].ToString();
+	}
+
+    <div class="BTNcenter">
+        <input type="submit" class="btn" id="btn_submit" name="btn_submit" value="@Resources.Resource.儲存送出" onclick="javascript:return confirm('Are you sure?');">
+        <input type="button" class="btn" id="btn_cancle" name="btn_cancle" value="@Resources.Resource.取消變更" onclick="javascript:if (confirm('Are you sure?')){window.location.href='@Url.Content("~/" + _Controller + "/List")';}">
+    </div>
